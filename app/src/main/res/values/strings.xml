@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">WordsHero</string>
+    <string name="title_home">Home</string>
+    <string name="title_chart">Chart</string>
+    <string name="title_message">Chat</string>
+    <string name="title_about">About</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_takeWords">拍照取词</string>
+    <string name="title_mygame">我的游戏</string>
+    <string name="title_wordbook">单词本</string>
+</resources>
