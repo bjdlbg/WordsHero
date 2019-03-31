@@ -20,7 +20,7 @@ import com.jeremy.wordshero.fragment.WordFragment;
 
 /**
  * 程序入口
- *
+ * @author jixiang
  * */
 public class MainActivity extends AppCompatActivity {
 
