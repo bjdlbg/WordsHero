@@ -70,10 +70,11 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.navigation_message:
                 fragment = new MessageFragment();
-
+                break;
             case R.id.navigation_about:
                 fragment = new AboutFragment();
                 break;
+                default:break;
         }
         transaction.replace(R.id.container,fragment);
         transaction.commit();

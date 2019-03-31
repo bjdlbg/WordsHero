@@ -24,7 +24,8 @@ public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView=inflater.inflate(R.layout.fragment_about,container,false);
-        return rootView;    }
+        return rootView;
+    }
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
