@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.lvleo.dataloadinglayout.DataLoadingLayout
+        android:id="@+id/is_translating"
+        android:layout_margin="7dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent"
+        android:visibility="visible"
+        app:loadingBarColor="@android:color/holo_orange_dark"
+        app:statusText="暂无数据"
+        app:statusTextColor="@android:color/black"
+        app:statusTextSize="16sp" />
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/select_words_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/add_word"
+            android:layout_width="60dp"
+            android:layout_height="57dp"
+            android:layout_gravity="bottom|right"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_add_black_24dp" />
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+
+</LinearLayout>

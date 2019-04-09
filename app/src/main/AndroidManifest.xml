@@ -26,6 +26,36 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.jeremy.wordshero.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".activity.SelectWordsActivity"
+            android:label="@string/select_words"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.WordsListActivity" />
+        <activity android:name=".activity.CardActivity" />
+        <activity
+            android:name=".activity.EditBookActivity"
+            android:label="@string/edit_word_book"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.SelectBookActivity" />
+        <activity
+            android:name=".activity.CreatePDFActivity"
+            android:label="@string/create_pdf" />
+        <activity
+            android:name=".activity.MakeGameActivity"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activity.AnswerActivity" />
+        <activity android:name=".activity.EditGameActivity" />
     </application>
+
 
 </manifest>

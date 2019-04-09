@@ -1,6 +1,7 @@
 package com.jeremy.wordshero.fragment;
 
 import android.annotation.SuppressLint;
+import android.app.admin.SystemUpdateInfo;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -24,6 +25,7 @@ public class AboutFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         rootView=inflater.inflate(R.layout.fragment_about,container,false);
+
         return rootView;
     }
 

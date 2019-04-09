@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:clickable="true"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="40dp"
+        android:orientation="vertical">
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:layout_marginLeft="8dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/game_words_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:background="@null"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="word"
+                android:textStyle="bold"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <ImageView
+                android:layout_width="36dp"
+                android:layout_height="22dp"
+                android:layout_gravity="center_vertical"
+                android:clickable="false"
+                android:src="@drawable/clues" />
+
+            <AutoCompleteTextView
+                android:id="@+id/word_clue_edit_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="4"
+                android:layout_marginBottom="10dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            >
+
+            <ImageView
+                android:id="@+id/item_book_image"
+                android:layout_width="39dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/notebook"
+                android:clickable="false"/>
+
+            <TextView
+                android:id="@+id/word_book_from"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginLeft="4dp"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+
+                android:text="book"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <CheckBox
+        android:id="@+id/word_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:checked="true"
+        android:clickable="false"
+        android:layout_marginTop="8dp"
+        android:gravity="center_vertical" />
+
+
+</RelativeLayout>

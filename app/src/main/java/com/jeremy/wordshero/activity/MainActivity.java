@@ -1,6 +1,7 @@
 package com.jeremy.wordshero.activity;
 
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
@@ -24,8 +25,12 @@ import com.jeremy.wordshero.fragment.WordFragment;
  * */
 public class MainActivity extends AppCompatActivity {
 
+    public static final String BOOK_ID = "book_id";
+    private static Context context;
 
-
+    public static Context getContext() {
+        return context;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

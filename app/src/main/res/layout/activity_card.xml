@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginTop="5dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.CardActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:layout_gravity="center|bottom">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="415dp"
+            android:clipToPadding="false"
+            android:overScrollMode="never"
+            android:paddingStart="30dp"
+            android:paddingLeft="30dp"
+            android:paddingEnd="30dp"
+            android:paddingRight="30dp"
+            android:paddingBottom="30dp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="6dp" />
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_marginTop="30dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    >
+    <Button
+        android:id="@+id/card_btn_pdf"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/change_pdf"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="20dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+    <Button
+        android:id="@+id/card_btn_begin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/begin_game"
+        android:layout_marginRight="10dp"
+        style="@style/Base.Widget.AppCompat.Button.Colored"/>
+</LinearLayout>
+
+
+</LinearLayout>

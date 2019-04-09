@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginHorizontal="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="4"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/select_word_item"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="Hero"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp"
+            android:inputType="text"
+            android:digits="@string/edt_limit"
+            android:maxLength="20"
+            android:contextClickable="true"/>
+
+        <TextView
+            android:id="@+id/select_word_translation"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:gravity="right|center_vertical"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:gravity="right|center_vertical"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/delete_select_word"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:src="@drawable/ic_remove_circle_outline_black_24dp"
+            android:focusable="false"
+             />
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

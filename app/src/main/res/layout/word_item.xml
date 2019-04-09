@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.jeremy.wordshero.view.SwipeMenuLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:descendantFocusability="blocksDescendants"
+    android:clickable="true"
+    app:ios="false"
+    app:swipeEnable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/word_list_content"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:gravity="left|center_vertical"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp">
+
+
+            <TextView
+                android:id="@+id/english_vocabulary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:text="Word"
+                android:textStyle="bold"
+                android:textColor="@color/primary_text"
+                android:digits="@string/edt_limit"
+                android:maxLength="20"
+                />
+
+            <TextView
+                android:id="@+id/word_translation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small"
+                android:textColor="@color/secondary_text"
+                android:text="word"
+                android:visibility="visible"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="70dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="70dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/swipe_delete"
+                android:layout_width="70dp"
+                android:layout_height="match_parent"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:id="@+id/delete_icon"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_centerInParent="true"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:scaleType="centerCrop"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:src="@drawable/ic_delete_gray_24dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+</com.jeremy.wordshero.view.SwipeMenuLayout>
