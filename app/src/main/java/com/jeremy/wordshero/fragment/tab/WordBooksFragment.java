@@ -99,10 +99,10 @@ public class WordBooksFragment extends Fragment {
     public void onResume() {
         super.onResume();
         Log.d(TAG, "onResume run");
-
+        recyclerView = (RecyclerView) rootView.findViewById(R.id.recycler_view);
+        //没有单词本的时候显示的布局
+        nobookLayout = (LinearLayout) rootView.findViewById(R.id.nobook_layout);
         //没有数据时，显示无数据界面
-
-
 
         if (EXIT_DELETE) {
             EXIT_DELETE = false;
@@ -337,6 +337,7 @@ public class WordBooksFragment extends Fragment {
      *
      * @return
      */
+
     public boolean onBackPressed() {
         if (deleteActionBarShow) {
             deleteActionBarShow = false;

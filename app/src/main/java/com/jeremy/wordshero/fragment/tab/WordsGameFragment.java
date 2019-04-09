@@ -44,7 +44,8 @@ import static android.support.v4.app.ActivityCompat.invalidateOptionsMenu;
 /**
  * @author jixiang
  * @date 2019/3/31
- */public class WordsGameFragment extends Fragment implements Games.ItemEditBtnClickListener,
+ */
+public class WordsGameFragment extends Fragment implements Games.ItemEditBtnClickListener,
         Games.ItemAnswerTvClickListener, Games.ItemShowPdfListener, Games.ItemDeleteGameListener {
     private View rootView;
     private List<Game> gamesList = new ArrayList<>();
@@ -71,28 +72,7 @@ import static android.support.v4.app.ActivityCompat.invalidateOptionsMenu;
                 startActivity(intent);
             }
         });
-        crosswordsGameDaoImp = new CrosswordsGameDaoImp(getContext());
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.games_recycler_view);
-        noGameLayout =(LinearLayout)rootView.findViewById(R.id.nogame_layout);
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        adapter = new GamesAdapter(gamesList);
-
-        //当没有数据时候显示没有数据
-        if (initGamesList()){
-            recyclerView.setVisibility(View.VISIBLE);
-            noGameLayout.setVisibility(View.GONE);
-        }else {
-            recyclerView.setVisibility(View.GONE);
-            noGameLayout.setVisibility(View.VISIBLE);
-        }
-
-        //实现接口
-        adapter.setItemEditBtnClickListener(this);
-        adapter.setItemAnswerTvClickListener(this);
-        adapter.setItemClickListener(this);
-        adapter.setItemDeleteGameLister(this);
-        recyclerView.setAdapter(adapter);
+        initView();
 
 
 //        recyclerView = (RecyclerView) rootView.findViewById(R.id.games_recycler_view);
@@ -108,7 +88,30 @@ import static android.support.v4.app.ActivityCompat.invalidateOptionsMenu;
         return rootView;
     }
 
+        public void initView(){
+    crosswordsGameDaoImp = new CrosswordsGameDaoImp(getContext());
+    recyclerView = (RecyclerView) rootView.findViewById(R.id.games_recycler_view);
+    noGameLayout =(LinearLayout)rootView.findViewById(R.id.nogame_layout);
+    LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+    recyclerView.setLayoutManager(layoutManager);
+    adapter = new GamesAdapter(gamesList);
 
+    //当没有数据时候显示没有数据
+    if (initGamesList()){
+        recyclerView.setVisibility(View.VISIBLE);
+        noGameLayout.setVisibility(View.GONE);
+    }else {
+        recyclerView.setVisibility(View.GONE);
+        noGameLayout.setVisibility(View.VISIBLE);
+    }
+
+    //实现接口
+    adapter.setItemEditBtnClickListener(this);
+    adapter.setItemAnswerTvClickListener(this);
+    adapter.setItemClickListener(this);
+    adapter.setItemDeleteGameLister(this);
+    recyclerView.setAdapter(adapter);
+}
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -209,31 +212,29 @@ import static android.support.v4.app.ActivityCompat.invalidateOptionsMenu;
         super.onResume();
         Log.d(TAG, "onResume");
         //当重回游戏界面的时候再次判断是否有数据
-        recyclerView = (RecyclerView) rootView.findViewById(R.id.games_recycler_view);
-        noGameLayout =(LinearLayout)rootView.findViewById(R.id.nogame_layout);
-
-        if(EXIT_DELETE) {
-            EXIT_DELETE=false;
-        }else{
-            if (initGamesList()){
-                recyclerView.setVisibility(View.VISIBLE);
-                noGameLayout.setVisibility(View.GONE);
-            }else {
-                recyclerView.setVisibility(View.GONE);
-                noGameLayout.setVisibility(View.VISIBLE);
-            }
-        }
-        Log.d("onResume", "i am run");
-
-        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        recyclerView.setLayoutManager(layoutManager);
-        adapter = new GamesAdapter(gamesList);
-        //实现接口
-        adapter.setItemEditBtnClickListener(this);
-        adapter.setItemAnswerTvClickListener(this);
-        adapter.setItemClickListener(this);
-        adapter.setItemDeleteGameLister(this);
-        recyclerView.setAdapter(adapter);
+       initView();
+//        if(EXIT_DELETE) {
+//            EXIT_DELETE=false;
+//        }else{
+//            if (initGamesList()){
+//                recyclerView.setVisibility(View.VISIBLE);
+//                noGameLayout.setVisibility(View.GONE);
+//            }else {
+//                recyclerView.setVisibility(View.GONE);
+//                noGameLayout.setVisibility(View.VISIBLE);
+//            }
+//        }
+//        Log.d("onResume", "i am run");
+//
+//        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
+//        recyclerView.setLayoutManager(layoutManager);
+//        adapter = new GamesAdapter(gamesList);
+//        //实现接口
+//        adapter.setItemEditBtnClickListener(this);
+//        adapter.setItemAnswerTvClickListener(this);
+//        adapter.setItemClickListener(this);
+//        adapter.setItemDeleteGameLister(this);
+//        recyclerView.setAdapter(adapter);
     }
 
     @Override

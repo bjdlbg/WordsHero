@@ -47,6 +47,7 @@ public class WordFragment extends Fragment{
     @Override
     public void onResume() {
         initView(rootView);
+
         super.onResume();
     }
 

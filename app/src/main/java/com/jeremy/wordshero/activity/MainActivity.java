@@ -18,6 +18,10 @@ import com.jeremy.wordshero.fragment.AboutFragment;
 import com.jeremy.wordshero.fragment.ChartFragment;
 import com.jeremy.wordshero.fragment.MessageFragment;
 import com.jeremy.wordshero.fragment.WordFragment;
+import com.jeremy.wordshero.fragment.tab.WordBooksFragment;
+import com.jeremy.wordshero.fragment.tab.WordsGameFragment;
+
+import java.util.List;
 
 /**
  * 程序入口
@@ -84,6 +88,23 @@ public class MainActivity extends AppCompatActivity {
         transaction.replace(R.id.container,fragment);
         transaction.commit();
     }
-
+    @Override
+    public void onBackPressed() {
+        List<Fragment> fragments=getSupportFragmentManager().getFragments();
+        for(Fragment fragment:fragments){
+            if(fragment instanceof WordBooksFragment){
+                if(((WordBooksFragment) fragment).onBackPressed()){
+                    /*在Fragment中处理返回事件*/
+                    return;
+                }
+            }
+            if(fragment instanceof WordsGameFragment){
+                if(((WordsGameFragment) fragment).onBackPressed()){
+                    return;
+                }
+            }
+        }
+        super.onBackPressed();
+    }
 
 }

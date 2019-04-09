@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:animateLayoutChanges="true"
-    tools:context=".activity.AnswerActivity">
+    tools:context=".activity.AnswerActivity"
+    tools:ignore="MissingDefaultResource">
 
     <TextView
         android:id="@+id/game_title"
